@@ -636,7 +636,7 @@ function menu() {
             "View the total utilized budget of a department?",
             "View employees by manager?",
             "View employees by department?",
-            "Exit",
+            "Quit!",
           ],
         },
       ])
@@ -688,7 +688,7 @@ function menu() {
           case "Delete employees?":
             deleteEmployee();
             break;
-          case "Exit":
+          case "Quit!":
             db.end();
             break;
           default:
