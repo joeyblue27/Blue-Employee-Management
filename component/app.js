@@ -1,3 +1,5 @@
+// import inquirer and mysql
+
 const inquirer = require("inquirer");
 const mysql = require("mysql2");
 const logo = require("asciiart-logo");
@@ -10,6 +12,8 @@ const db = mysql.createConnection(
   }
 );
 
+// view all data from all the departments
+
 function viewAllDepartments() {
   db.query("SELECT * FROM department", function (err, results) {
     if (err) throw err;
@@ -18,6 +22,8 @@ function viewAllDepartments() {
     console.log("Use arrow keys to continue");
   });
 }
+
+// view all roles
 
 function viewAllRoles() {
   db.query("SELECT * FROM roles", function (err, results) {
@@ -29,6 +35,8 @@ function viewAllRoles() {
 }
 
 
+// view all employees
+
 function viewAllEmployees() {
   db.query("SELECT * FROM employee", function (err, results) {
     if (err) throw err;
@@ -37,6 +45,8 @@ function viewAllEmployees() {
     console.log("Use arrow keys to continue");
   });
 }
+
+// view the total utilized budget
 
 function viewBudget() {
   console.log("Viewing the total utilized budget of a department");
@@ -88,6 +98,8 @@ function viewBudget() {
     departmentBudget();
   });
 }
+
+// view employees by manager
 
 function viewEmployeesByManager() {
   console.log("Viewing employees by manager");
@@ -148,6 +160,8 @@ function viewEmployeesByManager() {
   });
 }
 
+// view employees by department
+
 function viewEmployeesByDepartment() {
   console.log("Viewing employees by department");
   db.query("SELECT * FROM department;", function (err, res) {
@@ -206,6 +220,8 @@ function viewEmployeesByDepartment() {
   });
 }
 
+// add a department
+
 function addDepartment() {
   const newDepartment = () => {
     return inquirer
@@ -245,6 +261,7 @@ function addDepartment() {
   newDepartment();
 }
 
+// add a role
 
 function addRole() {
   console.log("Adding a role");
@@ -291,7 +308,7 @@ function addRole() {
           );
         })
         .then(() => {
-          console.log("New role has ben added!");
+          console.log("Added!");
           menu();
         })
         .catch((err) => console.log(err));
@@ -317,7 +334,12 @@ function addEmployee() {
             {
               type: "input",
               name: "first_name",
-              message: "What is the employee's name?",
+              message: "What is the employee's first name?",
+            },
+            {
+              type: "input",
+              name: "last_name",
+              message: "What is the employee's last name?",
             },
             {
               type: "list",
@@ -326,15 +348,6 @@ function addEmployee() {
               choices: roles.map((role) => ({
                 name: role.title,
                 value: role.id,
-              })),
-            },
-            {
-              type: "list",
-              name: "manager_id",
-              message: "Who is the employee's manager?",
-              choices: managers.map((manager) => ({
-                name: manager.first_name + " " + manager.last_name,
-                value: manager.id,
               })),
             },
           ])
@@ -356,7 +369,7 @@ function addEmployee() {
             );
           })
           .then(() => {
-            console.log("New employee has been added!");
+            console.log("Added!");
             menu();
           })
           .catch((err) => console.log(err));
@@ -558,6 +571,8 @@ function deleteRole() {
   });
 }
 
+// delete an employee
+
 function deleteEmployee() {
   console.log("Deleting an employee");
   db.query("SELECT * FROM employee;", function (err, res) {
@@ -598,6 +613,7 @@ function deleteEmployee() {
   });
 }
 
+// ascii logo
 
 function menu() {
 
@@ -613,6 +629,8 @@ function menu() {
         textColor: "blue",
       }).render()
     );
+
+// create database list
 
   const dbList = () => {
     return inquirer
