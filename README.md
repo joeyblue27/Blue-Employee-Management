@@ -21,8 +21,8 @@ This project is licensed under the MIT license.
 None at this time! 
 ## Tests
 no tests to be run
-## Video Walkthrough
-* [Walkthrough](https://drive.google.com/file/d/1JsQr9k0kewQZ95hd_mSUym4rdk6UzNfD/view?usp=share_link)
+## Walkthrough
+* [Video](https://drive.google.com/file/d/1JsQr9k0kewQZ95hd_mSUym4rdk6UzNfD/view?usp=share_link)
 ## Contacts
 * Email: Joeyblue27@gmail.com 
 * GitHub: https://github.com/joeyblue27/Blue-Employee-Management
