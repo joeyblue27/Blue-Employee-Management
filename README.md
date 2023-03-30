@@ -22,7 +22,7 @@ None at this time!
 ## Tests
 no tests to be run
 ## Video Walkthrough
-* Google Link: https://drive.google.com/file/d/1JsQr9k0kewQZ95hd_mSUym4rdk6UzNfD/view?usp=share_link
+* [Walkthrough](https://drive.google.com/file/d/1JsQr9k0kewQZ95hd_mSUym4rdk6UzNfD/view?usp=share_link)
 ## Contacts
 * Email: Joeyblue27@gmail.com 
 * GitHub: https://github.com/joeyblue27/Blue-Employee-Management
