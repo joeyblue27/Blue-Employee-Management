@@ -2,7 +2,7 @@
 
 
 # Description
-Node CLI database application that uses inquirer and mysql to view, update, add and delete employees. 
+Node CLI database application that uses inquirer and mysql to view, update, add and delete employees information. 
 The application manages employee roles, salaries, and departments. 
 ## Table of Contents 
 * [Installation](#installation)
