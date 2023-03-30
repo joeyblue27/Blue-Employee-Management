@@ -1,4 +1,4 @@
-const display = require("./component/index.js");
+const display = require("./component/app.js");
 
 function init() {
 
